@@ -1,0 +1,47 @@
+﻿@model UserCredential
+@{
+    ViewBag.Title = "Login";
+}
+
+<div class="container my-5 py-5">
+    <div class="row justify-content-center">
+
+        <div class="col-md-6 col-lg-4">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h2 class="text-center">Login</h2>
+                    <hr class="my-4" />
+
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <p class="text-danger text-center"><small>@ViewBag.ErrorMessage</small></p>
+                    }
+
+                <form asp-controller="Auth" asp-action="Login" method="post">
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="UserName" type="text" class="form-control" placeholder="name@example.com">
+                        <label asp-for="UserName"></label>
+                        <small><span asp-validation-for="UserName" class="text-danger"></span></small>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Password">
+                        <label asp-for="Password"></label>
+                        <small><span asp-validation-for="Password" class="text-danger"></span></small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+                </div>
+            </div>
+        </div>  
+
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

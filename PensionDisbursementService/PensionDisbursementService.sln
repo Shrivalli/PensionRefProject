@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.809.10
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PensionDisbursementService", "PensionDisbursementService\PensionDisbursementService.csproj", "{713360D7-D8EA-4681-ABB0-A111D57B03C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PensionDisbursementService.Tests", "PensionDisbursementService.Tests\PensionDisbursementService.Tests.csproj", "{6CF3BF1A-3F6E-47A6-A087-25DDD9587242}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{713360D7-D8EA-4681-ABB0-A111D57B03C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{713360D7-D8EA-4681-ABB0-A111D57B03C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{713360D7-D8EA-4681-ABB0-A111D57B03C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{713360D7-D8EA-4681-ABB0-A111D57B03C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CF3BF1A-3F6E-47A6-A087-25DDD9587242}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CF3BF1A-3F6E-47A6-A087-25DDD9587242}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CF3BF1A-3F6E-47A6-A087-25DDD9587242}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CF3BF1A-3F6E-47A6-A087-25DDD9587242}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {778D1D1A-D2F3-4F2E-AA66-E754C64E1284}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,67 @@
+﻿@model PensionerInput
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="container py-4">
+    <div class="row justify-content-center">
+
+        <div class="col-md-7 col-lg-5">
+            <div class="card border-0 shadow-sm">
+                <div class="card-body">
+                    <h4>Get Pension Details</h4>
+                    <hr class="my-3" />
+
+                    @if (ViewBag.ErrorMessage != null)
+                    {
+                        <p class="text-danger text-center"><small>@ViewBag.ErrorMessage</small></p>
+                    }
+
+                    <form asp-controller="Pension" asp-action="Index" method="post">
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="mb-4">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" type="text" class="form-control" placeholder="Pensioner's Name">
+                            <small><span asp-validation-for="Name" class="text-danger"></span></small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="DateOfBirth" class="form-label"></label>
+                            <input asp-for="DateOfBirth" type="date" class="form-control">
+                            <small><span asp-validation-for="DateOfBirth" class="text-danger"></span></small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="PAN" class="form-label"></label>
+                            <input asp-for="PAN" type="text" class="form-control" placeholder="ABCDE1234F">
+                            <small><span asp-validation-for="PAN" class="text-danger"></span></small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="AadharNumber" class="form-label"></label>
+                            <input asp-for="AadharNumber" type="text" class="form-control" placeholder="111122223333">
+                            <small><span asp-validation-for="AadharNumber" class="text-danger"></span></small>
+                        </div>
+
+                        <div class="mb-4">
+                            <label asp-for="PensionType" class="form-label"></label>
+                            <select asp-for="PensionType" asp-items="Html.GetEnumSelectList<PensionType>()" class="form-control"></select>
+                            <small><span asp-validation-for="PensionType" class="text-danger"></span></small>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary px-3">Submit</button>
+                        <button type="reset" class="btn btn-outline-secondary px-4">Clear</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts
+{
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,25 @@
+﻿@model ProcessPensionInfo
+@{
+    ViewBag.Title = "Pension Process Status";
+}
+
+<div class="container">
+    @if (Model.Success)
+    {
+        <div class="alert alert-success border-0 shadow-sm" role="alert">
+            <h3>Success!</h3>
+            <p>@Model.Message</p>
+            <hr />
+            <a asp-controller="Pension" asp-action="Index" class="btn btn-outline-success btn-sm">Home</a>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-danger border-0 shadow-sm" role="alert">
+            <h3>Failed!</h3>
+            <p>@Model.Message</p>
+            <hr />
+            <a asp-controller="Pension" asp-action="Index" class="btn btn-outline-danger btn-sm">Home</a>
+        </div>
+    }
+</div>

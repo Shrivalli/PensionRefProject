@@ -1,0 +1,34 @@
+﻿html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 48px;
+    margin-bottom: 48px;
+    font-family: Raleway;
+    background-color: #f8f9fa;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 48px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+/*Overrides*/
+.form-label {
+    margin-bottom: 0.25rem;
+}
